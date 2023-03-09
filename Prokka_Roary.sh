@@ -75,7 +75,7 @@ roary -e --mafft -r -v -p $(nproc) ASSEMBLY/PROKKA/GFF/*.gff -f ./ROARY
 FastTree -nt -gtr ./ROARY/core_gene_alignment.aln > ./ROARY/FastTree_Roary.newick
 
 # generar primer grafico de calidad de publicacion
-Roary_plots.py .ROARY/FastTree_Roary.newick ./ROARY/gene_presence_absence.csv
+roary_plots.py .ROARY/FastTree_Roary.newick ./ROARY/gene_presence_absence.csv
 
 #  generar segundo grafico de calidad de publicacion
 roary2svg.pl --colour="blue" --sepcolour="green" ./ROARY/gene_presence_absence.csv > ./ROARY/pan_genome.svg
